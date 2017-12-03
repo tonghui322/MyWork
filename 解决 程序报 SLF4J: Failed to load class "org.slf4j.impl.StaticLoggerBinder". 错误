@@ -1,0 +1,15 @@
+调试程序出现如下错误:
+
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details
+
+下载相应的slf4j的jar包，在slf4j官网下载，
+
+以1.7.21版本为例。
+
+一般只是在程序中引入了slf4j-api-1.7.21.jar文件
+
+解决方式如下：
+
+　　解压下载的zip包中，拷贝 slf4j-nop-1.7.21.jar 文件到项目中，再build path, 就解决了。
