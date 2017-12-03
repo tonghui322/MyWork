@@ -1,0 +1,14 @@
+重装MyEclipse之后从svn导入项目时遇到的一些问题
+1.导入自动生成代码模块的g5系统时的问题
+导入g5系统弄之后，项目名后面直接有红叉，项目中的代码却没有问题。
+首先看jar包的路径。
+右键点击项目-->Confignation Build Path --> Libraries（将除了JRE System Libtary 外的其他jar包先删除） --> 到项目中的Preferenced Libraries 赋值所有jar包到之前的Libraries中 --> 找到项目要部署的tomcat中的lib文件夹复制其中所有的jar到Libraries的Add External TARs中 -->OK即可
+
+重启tomcat即可解决问题。
+
+2.在导入项目时要将项目放到tomcat的webapps文件夹下。
+
+仔其他任何一个文件夹下都会出问题，又或者在webapps中有，其他文件夹下也有同一个项目，在运行时也会出现一些问题，所以对于新手而言要细致一些，看清楚路径。
+
+3.在连接数据库时，一直显示的未连接，或者远程关闭连接，则要考虑是否是数据库本身存在老化或者其他的连接问题。
+确保没有这些问题之后再去找其他的问题，避免走弯路浪费时间。
